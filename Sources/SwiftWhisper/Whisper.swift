@@ -61,6 +61,8 @@ public class Whisper {
                 let startTime = whisper_full_get_segment_t0(ctx, index)
                 let endTime = whisper_full_get_segment_t1(ctx, index)
 
+                print(String(Substring(cString: text)))
+                
                 newSegments.append(.init(
                     startTime: Int(startTime) * 10, // Time is given in ms/10, so correct for that
                     endTime: Int(endTime) * 10,
